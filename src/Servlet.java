@@ -2,7 +2,6 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import java.nio.file.*;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 public class Servlet extends HttpServlet{
 
@@ -10,7 +9,7 @@ public class Servlet extends HttpServlet{
         req.getRequestDispatcher("form.jsp").forward(req, resp);
     }
 
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
         String login = req.getParameter("login");
         String password = System.lineSeparator() + req.getParameter("password");
